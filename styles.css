@@ -13,6 +13,25 @@ header {
     padding: 1em 0;
     text-align: center;
     border-bottom: 2px solid #c2b280;
+    position: relative;
+}
+
+header::before {
+    content: "";
+    background: url('images/A_header_with_white_silhouettes_of_books_arranged_.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+}
+
+header h1 {
+    position: relative;
+    z-index: 1;
 }
 
 nav ul {
@@ -21,10 +40,13 @@ nav ul {
     margin: 0;
     display: flex;
     justify-content: center;
+    position: relative;
+    z-index: 1;
 }
 
 nav ul li {
     margin: 0 15px;
+    position: relative;
 }
 
 nav ul li a {
@@ -32,6 +54,45 @@ nav ul li a {
     text-decoration: none;
     font-weight: bold;
     font-size: 1em;
+    padding: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c2b280;
+    transform: scale(1.1);
+}
+
+nav ul li.active a {
+    position: relative;
+    color: #4b3b2e;
+    background-color: #c2b280;
+    padding: 15px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li.active a::before,
+nav ul li.active a::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 100%;
+    background-color: #c2b280;
+    border: 1px solid #4b3b2e;
+    border-radius: 5px;
+}
+
+nav ul li.active a::before {
+    left: -10px;
+    border-right: none;
+}
+
+nav ul li.active a::after {
+    right: -10px;
+    border-left: none;
 }
 
 main {
