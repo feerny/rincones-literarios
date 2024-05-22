@@ -147,3 +147,37 @@ footer p {
     border-left: 5px solid #c2b280;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
+.autor-obra-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.autor-img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.obra-container {
+    text-align: center;
+    margin-left: 20px;
+}
+
+.obra-container p {
+    margin: 0;
+    font-weight: bold;
+}
+
+.obra-img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+
+.biografia {
+    flex: 1;
+}
