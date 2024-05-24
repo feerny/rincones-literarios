@@ -16,7 +16,6 @@ header {
     position: relative;
 }
 
-
 header::before {
     content: "";
     background: url('images/A_header_with_white_silhouettes_of_books_arranged_.png') no-repeat center center;
@@ -28,19 +27,6 @@ header::before {
     right: 0;
     bottom: 0;
     z-index: 0;
-    animation: headerAnimation 20s infinite alternate;
-}
-
-@keyframes headerAnimation {
-    0% {
-        transform: scale(1) translateX(0);
-    }
-    50% {
-        transform: scale(1.1) translateX(1%);
-    }
-    100% {
-        transform: scale(1) translateX(0);
-    }
 }
 
 header h1 {
