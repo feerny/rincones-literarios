@@ -125,8 +125,30 @@ h2 {
 }
 
 #referencias {
-    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; /* Añade espacio entre las secciones */
 }
+
+#referencias > div {
+    flex: 1;
+    min-width: 200px; /* Ajusta este valor según sea necesario */
+}
+
+#referencias h3 {
+    margin-top: 0;
+}
+
+#referencias ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#referencias ul li {
+    margin-bottom: 10px;
+}
+
 
 footer {
     background-color: #4b3b2e;
