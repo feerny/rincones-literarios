@@ -100,6 +100,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img src="${libro.imagenAutor}" alt="Imagen de ${libro.autor}" class="autor-img expandable" title="Click para expandir">
                     <div class="biografia">
                         <p><strong>Biografía:</strong> ${libro.biografia}</p>
+                        <p><strong>Resumen:</strong> ${libro.resumen}</p>
                     </div>
                     <div class="obra-container">
                         <p>Libro:</p>
@@ -122,6 +123,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     <img src="${libro.imagenAutor}" alt="Imagen de ${libro.autor}" class="autor-img expandable" title="Click para expandir">
                     <div class="biografia">
                         <p><strong>Biografía:</strong> ${libro.biografia}</p>
+                        <p><strong>Resumen:</strong> ${libro.resumen}</p>
                     </div>
                     <div class="obra-container">
                         <p>Libro:</p>
