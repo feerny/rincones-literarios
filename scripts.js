@@ -160,4 +160,13 @@ document.addEventListener("DOMContentLoaded", function() {
             modal.style.display = 'flex';
         });
     });
+
+    // Obtener el elemento del pie de página
+var footer = document.querySelector('footer');
+
+// Obtener el año actual
+var year = new Date().getFullYear();
+
+// Actualizar el texto del pie de página con el año actual
+footer.innerHTML = '&copy; ' + year + ' Mariana Florez Gomez, Jeslin ArizaRendón y Diana Carolina Ocampo. Todos los derechos reservados.';
 });
