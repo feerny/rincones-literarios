@@ -97,14 +97,13 @@ document.addEventListener("DOMContentLoaded", function() {
             resumenDiv.innerHTML = `
                 <h3>${libro.autor}</h3>
                 <div class="autor-obra-container">
-                    <img src="${libro.imagenAutor}" alt="Imagen de ${libro.autor}" class="autor-img">
+                    <img src="${libro.imagenAutor}" alt="Imagen de ${libro.autor}" class="autor-img expandable" title="Click para expandir">
                     <div class="biografia">
                         <p><strong>Biografía:</strong> ${libro.biografia}</p>
-                        <p><strong>Resumen:</strong> ${libro.resumen}</p>
                     </div>
                     <div class="obra-container">
-                        <p>Uno de sus libros:</p>
-                        <img src="${libro.imagenObra}" alt="Imagen de la obra de ${libro.autor}" class="obra-img">
+                        <p>Libro:</p>
+                        <img src="${libro.imagenObra}" alt="Imagen de la obra de ${libro.autor}" class="obra-img expandable" title="Click para expandir">
                     </div>
                 </div>
             `;
@@ -120,18 +119,45 @@ document.addEventListener("DOMContentLoaded", function() {
             resumenDiv.innerHTML = `
                 <h3>${libro.autor}</h3>
                 <div class="autor-obra-container">
-                    <img src="${libro.imagenAutor}" alt="Imagen de ${libro.autor}" class="autor-img">
+                    <img src="${libro.imagenAutor}" alt="Imagen de ${libro.autor}" class="autor-img expandable" title="Click para expandir">
                     <div class="biografia">
                         <p><strong>Biografía:</strong> ${libro.biografia}</p>
-                        <p><strong>Resumen:</strong> ${libro.resumen}</p>
                     </div>
                     <div class="obra-container">
-                        <p>Uno de sus libros:</p>
-                        <img src="${libro.imagenObra}" alt="Imagen de la obra de ${libro.autor}" class="obra-img">
+                        <p>Libro:</p>
+                        <img src="${libro.imagenObra}" alt="Imagen de la obra de ${libro.autor}" class="obra-img expandable" title="Click para expandir">
                     </div>
                 </div>
             `;
             resContainerSegunda.appendChild(resumenDiv);
         });
     }
+
+    // Event listeners for expandable images
+    const expandableImages = document.querySelectorAll('.expandable');
+    expandableImages.forEach(img => {
+        img.addEventListener('click', function() {
+            const modal = document.querySelector('#image-modal');
+            const modalImg = modal.querySelector('img');
+            modalImg.src = this.src;
+            modal.style.display = 'flex';
+        });
+    });
+
+    // Event listener to close the image modal
+    document.querySelector('#image-modal').addEventListener('click', function() {
+        this.style.display = 'none';
+    });
+
+    // Adding expand functionality to images in the inicio section
+    const inicioImages = document.querySelectorAll('#inicio .images img');
+    inicioImages.forEach(img => {
+        img.classList.add('expandable');
+        img.addEventListener('click', function() {
+            const modal = document.querySelector('#image-modal');
+            const modalImg = modal.querySelector('img');
+            modalImg.src = this.src;
+            modal.style.display = 'flex';
+        });
+    });
 });
