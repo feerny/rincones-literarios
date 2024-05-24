@@ -270,6 +270,56 @@ footer p {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adds depth to the image */
 }
 
+.mensaje-literatura {
+    background-color: #f4e2d8;
+    border: 2px solid #c2b280;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    font-style: italic;
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #4b3b2e;
+}
+
+.mensaje-literatura p {
+    margin: 0;
+}
+
+.mensaje-literatura img {
+    margin-top: 20px;
+    width: 90%;
+    height: 300px;
+    border-top: 2px solid #c2b280;
+    padding-top: 20px;
+}
+
+/* Existing styles */
+
+.pregunta-literatura {
+    background-color: #f4f1e1;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: 'Georgia', serif;
+    color: #4b3b2e;
+}
+
+.pregunta-literatura h2 {
+    font-size: 2em;
+    margin: 0;
+    font-weight: normal;
+    color: #a64b2a;
+}
+
+
+
+
+
+
 
 
 /* Media Queries for Mobile Devices */
