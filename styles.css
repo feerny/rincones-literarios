@@ -176,13 +176,15 @@ footer p {
     flex: 1;
 }
 
-/* Estilos anteriores */
-
+/* Efecto hover para las imágenes */
 .expandable:hover {
     cursor: pointer;
     opacity: 0.8;
+    transform: scale(1.05);
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Contenedor del modal en forma de libro abierto */
 #image-modal {
     display: none;
     justify-content: center;
@@ -196,11 +198,56 @@ footer p {
     z-index: 1000;
 }
 
-#image-modal img {
-    max-width: 80%;
-    max-height: 80%;
+#image-modal .book-container {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    aspect-ratio: 3 / 2;
+    background: #f9f4e8;
+    border: 8px solid #c2b280;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    perspective: 1000px; /* Adds depth to the book effect */
 }
+
+#image-modal .book-container::before,
+#image-modal .book-container::after {
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    background: #fff;
+    border: 1px solid #c2b280;
+    border-radius: 10px;
+    z-index: -1;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#image-modal .book-container::before {
+    left: 0;
+    transform: rotateY(-15deg); /* Adjust the angle for a more book-like appearance */
+    transform-origin: right center;
+}
+
+#image-modal .book-container::after {
+    right: 0;
+    transform: rotateY(15deg); /* Adjust the angle for a more book-like appearance */
+    transform-origin: left center;
+}
+
+#image-modal img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Adds depth to the image */
+}
+
 
 
 /* Media Queries for Mobile Devices */

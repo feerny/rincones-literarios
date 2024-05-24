@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function() {
         img.addEventListener('click', function() {
             const modal = document.querySelector('#image-modal');
             const modalImg = modal.querySelector('img');
+            const bookContainer = modal.querySelector('.book-container');
             modalImg.src = this.src;
             modal.style.display = 'flex';
         });
@@ -164,11 +165,11 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     // Obtener el elemento del pie de página
-var footer = document.querySelector('footer');
+    var footer = document.querySelector('footer');
 
-// Obtener el año actual
-var year = new Date().getFullYear();
+    // Obtener el año actual
+    var year = new Date().getFullYear();
 
-// Actualizar el texto del pie de página con el año actual
-footer.innerHTML = '&copy; ' + year + ' Mariana Florez Gomez, Jeslin ArizaRendón y Diana Carolina Ocampo. Todos los derechos reservados.';
+    // Actualizar el texto del pie de página con el año actual
+    footer.innerHTML = '&copy; ' + year + ' Mariana Florez Gomez, Jeslin Ariza Rendón y Diana Carolina Ocampo. Todos los derechos reservados.';
 });
